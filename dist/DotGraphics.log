@@ -1,0 +1,78 @@
+03/11/2013 19:02:24 [ INFO] DotGraphics$RequestListenerThread - Listening on port 9000
+03/11/2013 19:04:25 [ INFO] DotGraphics$RequestListenerThread - Incoming connection from /0:0:0:0:0:0:0:1
+03/11/2013 19:04:25 [ INFO] DotGraphics$WorkerThread - New connection thread
+03/11/2013 19:04:25 [ INFO] HttpDotGraphMessageHandler - POST / [Host: localhost:9000, Connection: keep-alive, Content-Length: 70, Origin: chrome-extension://cdjfedloinmbppobahmonnjigpmlajcd, User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36, Content-Type: text/plain;charset=UTF-8, Accept: */*, Accept-Encoding: gzip,deflate,sdch, Accept-Language: en-GB,en;q=0.8,en-US;q=0.6]
+03/11/2013 19:04:25 [ INFO] HttpDotGraphMessageHandler - Incoming entity content (bytes): 70
+03/11/2013 19:04:25 [DEBUG] HttpDotGraphMessageHandler - message contents
+ digraph G {
+     a -> b -> c;
+     a-> c;
+     b -> d;
+     c-> d;
+ }
+03/11/2013 19:04:25 [ INFO] HttpDotGraphMessageHandler - requesting graph type: 
+03/11/2013 19:04:25 [ INFO] HttpDotGraphMessageHandler -  digraph G {
+     a -> b -> c;
+     a-> c;
+     b -> d;
+     c-> d;
+ }
+03/11/2013 19:04:26 [ INFO] HttpDotGraphMessageHandler - Responded with Success
+03/11/2013 19:04:37 [ INFO] DotGraphics$RequestListenerThread - Incoming connection from /0:0:0:0:0:0:0:1
+03/11/2013 19:04:37 [ INFO] DotGraphics$WorkerThread - New connection thread
+03/11/2013 19:04:37 [ INFO] HttpDotGraphMessageHandler - POST /svg [Host: localhost:9000, Connection: keep-alive, Content-Length: 70, Origin: chrome-extension://cdjfedloinmbppobahmonnjigpmlajcd, User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36, Content-Type: text/plain;charset=UTF-8, Accept: */*, Accept-Encoding: gzip,deflate,sdch, Accept-Language: en-GB,en;q=0.8,en-US;q=0.6]
+03/11/2013 19:04:37 [ INFO] HttpDotGraphMessageHandler - Incoming entity content (bytes): 70
+03/11/2013 19:04:37 [DEBUG] HttpDotGraphMessageHandler - message contents
+ digraph G {
+     a -> b -> c;
+     a-> c;
+     b -> d;
+     c-> d;
+ }
+03/11/2013 19:04:37 [ INFO] HttpDotGraphMessageHandler - requesting graph type: svg
+03/11/2013 19:04:37 [ INFO] HttpDotGraphMessageHandler -  digraph G {
+     a -> b -> c;
+     a-> c;
+     b -> d;
+     c-> d;
+ }
+03/11/2013 19:04:37 [ INFO] HttpDotGraphMessageHandler - Responded with Success
+03/11/2013 19:07:32 [ INFO] DotGraphics$RequestListenerThread - Listening on port 8080
+03/11/2013 19:07:46 [ INFO] DotGraphics$RequestListenerThread - Incoming connection from /0:0:0:0:0:0:0:1
+03/11/2013 19:07:46 [ INFO] DotGraphics$WorkerThread - New connection thread
+03/11/2013 19:07:46 [ INFO] HttpDotGraphMessageHandler - POST /svg [Host: localhost:8080, Connection: keep-alive, Content-Length: 70, Origin: chrome-extension://cdjfedloinmbppobahmonnjigpmlajcd, User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36, Content-Type: text/plain;charset=UTF-8, Accept: */*, Accept-Encoding: gzip,deflate,sdch, Accept-Language: en-GB,en;q=0.8,en-US;q=0.6]
+03/11/2013 19:07:46 [ INFO] HttpDotGraphMessageHandler - Incoming entity content (bytes): 70
+03/11/2013 19:07:46 [DEBUG] HttpDotGraphMessageHandler - message contents
+ digraph G {
+     a -> b -> c;
+     a-> c;
+     b -> d;
+     c-> d;
+ }
+03/11/2013 19:07:46 [ INFO] HttpDotGraphMessageHandler - requesting graph type: svg
+03/11/2013 19:07:46 [ INFO] HttpDotGraphMessageHandler -  digraph G {
+     a -> b -> c;
+     a-> c;
+     b -> d;
+     c-> d;
+ }
+03/11/2013 19:07:46 [ INFO] HttpDotGraphMessageHandler - Responded with Success
+03/11/2013 19:08:13 [ INFO] DotGraphics$RequestListenerThread - Incoming connection from /0:0:0:0:0:0:0:1
+03/11/2013 19:08:13 [ INFO] DotGraphics$WorkerThread - New connection thread
+03/11/2013 19:08:13 [ INFO] HttpDotGraphMessageHandler - POST /svg [Host: localhost:8080, Connection: keep-alive, Content-Length: 70, Origin: chrome-extension://cdjfedloinmbppobahmonnjigpmlajcd, User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36, Content-Type: text/plain;charset=UTF-8, Accept: */*, Accept-Encoding: gzip,deflate,sdch, Accept-Language: en-GB,en;q=0.8,en-US;q=0.6]
+03/11/2013 19:08:13 [ INFO] HttpDotGraphMessageHandler - Incoming entity content (bytes): 70
+03/11/2013 19:08:13 [DEBUG] HttpDotGraphMessageHandler - message contents
+ digraph G {
+     a -> b -> c;
+     a-> c;
+     b -> d;
+     c-> d;
+ }
+03/11/2013 19:08:13 [ INFO] HttpDotGraphMessageHandler - requesting graph type: svg
+03/11/2013 19:08:13 [ INFO] HttpDotGraphMessageHandler -  digraph G {
+     a -> b -> c;
+     a-> c;
+     b -> d;
+     c-> d;
+ }
+03/11/2013 19:08:13 [ INFO] HttpDotGraphMessageHandler - Responded with Success

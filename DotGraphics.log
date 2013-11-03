@@ -1,0 +1,441 @@
+01/11/2013 10:41:24 [ INFO] DotGraphics$RequestListenerThread - Listening on port 8000
+01/11/2013 10:41:32 [ INFO] DotGraphics$RequestListenerThread - Incoming connection from /0:0:0:0:0:0:0:1%0
+01/11/2013 10:41:32 [ INFO] DotGraphics$WorkerThread - New connection thread
+01/11/2013 10:41:32 [ INFO] HttpDotGraphMessageHandler - POST / [Host: localhost:8000, Connection: keep-alive, Content-Length: 933, Origin: chrome-extension://cdjfedloinmbppobahmonnjigpmlajcd, User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36, Content-Type: text/plain;charset=UTF-8, Accept: */*, Accept-Encoding: gzip,deflate,sdch, Accept-Language: en-US,en;q=0.8]
+01/11/2013 10:41:32 [ INFO] HttpDotGraphMessageHandler - Incoming entity content (bytes): 933
+01/11/2013 10:41:32 [DEBUG] HttpDotGraphMessageHandler - message contents
+digraph G {
+rankdir=LR
+"START" [style="filled", fillcolor="gray", shape="circle"];
+"START" -> "Split Execution";
+"Split Execution" [shape="oval"];
+"Split Execution" -> "Create Document in Drive";
+"Split Execution" -> "CAB Site Accountant";
+"Create Document in Drive" [shape="rectangle"];
+"Create Document in Drive" -> "Merge Execution";
+"CAB Site Accountant" [shape="tab"];
+"CAB Site Accountant" -> "Merge Execution";
+"Merge Execution" [shape="oval"];
+"Merge Execution" -> "Site Accountant approved?";
+"Site Accountant approved?" [shape="diamond"];
+"Site Accountant approved?" -> "Send Publish Email" [label="true"];
+"Site Accountant approved?" -> "Originator - CAPEX Rejection" [label="false"];
+"Originator - CAPEX Rejection" [shape="tab"];
+"Originator - CAPEX Rejection" -> "Split Execution";
+"Send Publish Email" [shape="rectangle"];
+"Send Publish Email" -> "END";
+"END" [style="filled", fillcolor="gray", shape="doublecircle"];
+}
+01/11/2013 10:41:32 [ INFO] HttpDotGraphMessageHandler - digraph G {
+rankdir=LR
+"START" [style="filled", fillcolor="gray", shape="circle"];
+"START" -> "Split Execution";
+"Split Execution" [shape="oval"];
+"Split Execution" -> "Create Document in Drive";
+"Split Execution" -> "CAB Site Accountant";
+"Create Document in Drive" [shape="rectangle"];
+"Create Document in Drive" -> "Merge Execution";
+"CAB Site Accountant" [shape="tab"];
+"CAB Site Accountant" -> "Merge Execution";
+"Merge Execution" [shape="oval"];
+"Merge Execution" -> "Site Accountant approved?";
+"Site Accountant approved?" [shape="diamond"];
+"Site Accountant approved?" -> "Send Publish Email" [label="true"];
+"Site Accountant approved?" -> "Originator - CAPEX Rejection" [label="false"];
+"Originator - CAPEX Rejection" [shape="tab"];
+"Originator - CAPEX Rejection" -> "Split Execution";
+"Send Publish Email" [shape="rectangle"];
+"Send Publish Email" -> "END";
+"END" [style="filled", fillcolor="gray", shape="doublecircle"];
+}
+01/11/2013 10:41:32 [ INFO] HttpDotGraphMessageHandler - Responded with Success
+01/11/2013 10:42:23 [ INFO] DotGraphics$RequestListenerThread - Incoming connection from /0:0:0:0:0:0:0:1%0
+01/11/2013 10:42:23 [ INFO] DotGraphics$WorkerThread - New connection thread
+01/11/2013 10:42:23 [ INFO] HttpDotGraphMessageHandler - POST / [Host: localhost:8000, Connection: keep-alive, Content-Length: 933, Origin: chrome-extension://cdjfedloinmbppobahmonnjigpmlajcd, User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36, Content-Type: text/plain;charset=UTF-8, Accept: */*, Accept-Encoding: gzip,deflate,sdch, Accept-Language: en-US,en;q=0.8]
+01/11/2013 10:42:23 [ INFO] HttpDotGraphMessageHandler - Incoming entity content (bytes): 933
+01/11/2013 10:42:23 [DEBUG] HttpDotGraphMessageHandler - message contents
+digraph G {
+rankdir=LR
+"START" [style="filled", fillcolor="gray", shape="circle"];
+"START" -> "Split Execution";
+"Split Execution" [shape="oval"];
+"Split Execution" -> "Create Document in Drive";
+"Split Execution" -> "CAB Site Accountant";
+"Create Document in Drive" [shape="rectangle"];
+"Create Document in Drive" -> "Merge Execution";
+"CAB Site Accountant" [shape="tab"];
+"CAB Site Accountant" -> "Merge Execution";
+"Merge Execution" [shape="oval"];
+"Merge Execution" -> "Site Accountant approved?";
+"Site Accountant approved?" [shape="diamond"];
+"Site Accountant approved?" -> "Send Publish Email" [label="true"];
+"Site Accountant approved?" -> "Originator - CAPEX Rejection" [label="false"];
+"Originator - CAPEX Rejection" [shape="tab"];
+"Originator - CAPEX Rejection" -> "Split Execution";
+"Send Publish Email" [shape="rectangle"];
+"Send Publish Email" -> "END";
+"END" [style="filled", fillcolor="gray", shape="doublecircle"];
+}
+01/11/2013 10:42:23 [ INFO] HttpDotGraphMessageHandler - digraph G {
+rankdir=LR
+"START" [style="filled", fillcolor="gray", shape="circle"];
+"START" -> "Split Execution";
+"Split Execution" [shape="oval"];
+"Split Execution" -> "Create Document in Drive";
+"Split Execution" -> "CAB Site Accountant";
+"Create Document in Drive" [shape="rectangle"];
+"Create Document in Drive" -> "Merge Execution";
+"CAB Site Accountant" [shape="tab"];
+"CAB Site Accountant" -> "Merge Execution";
+"Merge Execution" [shape="oval"];
+"Merge Execution" -> "Site Accountant approved?";
+"Site Accountant approved?" [shape="diamond"];
+"Site Accountant approved?" -> "Send Publish Email" [label="true"];
+"Site Accountant approved?" -> "Originator - CAPEX Rejection" [label="false"];
+"Originator - CAPEX Rejection" [shape="tab"];
+"Originator - CAPEX Rejection" -> "Split Execution";
+"Send Publish Email" [shape="rectangle"];
+"Send Publish Email" -> "END";
+"END" [style="filled", fillcolor="gray", shape="doublecircle"];
+}
+01/11/2013 10:42:23 [ INFO] HttpDotGraphMessageHandler - Responded with Success
+01/11/2013 11:08:58 [ INFO] DotGraphics$RequestListenerThread - Listening on port 8000
+01/11/2013 11:09:21 [ INFO] DotGraphics$RequestListenerThread - Incoming connection from /0:0:0:0:0:0:0:1%0
+01/11/2013 11:09:21 [ INFO] DotGraphics$WorkerThread - New connection thread
+01/11/2013 11:09:21 [ INFO] HttpDotGraphMessageHandler - GET / [Host: localhost:8000, Connection: keep-alive, User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36, Accept: */*, Accept-Encoding: gzip,deflate,sdch, Accept-Language: en-US,en;q=0.8]
+01/11/2013 11:09:21 [ INFO] HttpDotGraphMessageHandler - Responded with Success
+01/11/2013 11:09:31 [ INFO] DotGraphics$RequestListenerThread - Incoming connection from /0:0:0:0:0:0:0:1%0
+01/11/2013 11:09:31 [ INFO] DotGraphics$WorkerThread - New connection thread
+01/11/2013 11:09:31 [ INFO] HttpDotGraphMessageHandler - POST / [Host: localhost:8000, Connection: keep-alive, Content-Length: 933, Origin: chrome-extension://cdjfedloinmbppobahmonnjigpmlajcd, User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36, Content-Type: text/plain;charset=UTF-8, Accept: */*, Accept-Encoding: gzip,deflate,sdch, Accept-Language: en-US,en;q=0.8]
+01/11/2013 11:09:31 [ INFO] HttpDotGraphMessageHandler - Incoming entity content (bytes): 933
+01/11/2013 11:09:31 [DEBUG] HttpDotGraphMessageHandler - message contents
+digraph G {
+rankdir=LR
+"START" [style="filled", fillcolor="gray", shape="circle"];
+"START" -> "Split Execution";
+"Split Execution" [shape="oval"];
+"Split Execution" -> "Create Document in Drive";
+"Split Execution" -> "CAB Site Accountant";
+"Create Document in Drive" [shape="rectangle"];
+"Create Document in Drive" -> "Merge Execution";
+"CAB Site Accountant" [shape="tab"];
+"CAB Site Accountant" -> "Merge Execution";
+"Merge Execution" [shape="oval"];
+"Merge Execution" -> "Site Accountant approved?";
+"Site Accountant approved?" [shape="diamond"];
+"Site Accountant approved?" -> "Send Publish Email" [label="true"];
+"Site Accountant approved?" -> "Originator - CAPEX Rejection" [label="false"];
+"Originator - CAPEX Rejection" [shape="tab"];
+"Originator - CAPEX Rejection" -> "Split Execution";
+"Send Publish Email" [shape="rectangle"];
+"Send Publish Email" -> "END";
+"END" [style="filled", fillcolor="gray", shape="doublecircle"];
+}
+01/11/2013 11:09:31 [ INFO] HttpDotGraphMessageHandler - digraph G {
+rankdir=LR
+"START" [style="filled", fillcolor="gray", shape="circle"];
+"START" -> "Split Execution";
+"Split Execution" [shape="oval"];
+"Split Execution" -> "Create Document in Drive";
+"Split Execution" -> "CAB Site Accountant";
+"Create Document in Drive" [shape="rectangle"];
+"Create Document in Drive" -> "Merge Execution";
+"CAB Site Accountant" [shape="tab"];
+"CAB Site Accountant" -> "Merge Execution";
+"Merge Execution" [shape="oval"];
+"Merge Execution" -> "Site Accountant approved?";
+"Site Accountant approved?" [shape="diamond"];
+"Site Accountant approved?" -> "Send Publish Email" [label="true"];
+"Site Accountant approved?" -> "Originator - CAPEX Rejection" [label="false"];
+"Originator - CAPEX Rejection" [shape="tab"];
+"Originator - CAPEX Rejection" -> "Split Execution";
+"Send Publish Email" [shape="rectangle"];
+"Send Publish Email" -> "END";
+"END" [style="filled", fillcolor="gray", shape="doublecircle"];
+}
+01/11/2013 11:09:31 [ INFO] HttpDotGraphMessageHandler - Responded with Success
+01/11/2013 11:09:45 [ INFO] DotGraphics$RequestListenerThread - Incoming connection from /0:0:0:0:0:0:0:1%0
+01/11/2013 11:09:45 [ INFO] DotGraphics$WorkerThread - New connection thread
+01/11/2013 11:09:45 [ INFO] HttpDotGraphMessageHandler - POST / [Host: localhost:8000, Connection: keep-alive, Content-Length: 9, Origin: chrome-extension://cdjfedloinmbppobahmonnjigpmlajcd, User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36, Content-Type: text/plain;charset=UTF-8, Accept: */*, Accept-Encoding: gzip,deflate,sdch, Accept-Language: en-US,en;q=0.8]
+01/11/2013 11:09:45 [ INFO] HttpDotGraphMessageHandler - Incoming entity content (bytes): 9
+01/11/2013 11:09:45 [DEBUG] HttpDotGraphMessageHandler - message contents
+asfdasdfa
+01/11/2013 11:09:45 [ INFO] HttpDotGraphMessageHandler - asfdasdfa
+01/11/2013 11:09:45 [ INFO] HttpDotGraphMessageHandler - Responded with Success
+01/11/2013 11:16:50 [ INFO] DotGraphics$RequestListenerThread - Listening on port 8000
+01/11/2013 11:17:06 [ INFO] DotGraphics$RequestListenerThread - Incoming connection from /0:0:0:0:0:0:0:1%0
+01/11/2013 11:17:06 [ INFO] DotGraphics$WorkerThread - New connection thread
+01/11/2013 11:17:06 [ INFO] HttpDotGraphMessageHandler - POST / [Host: localhost:8000, Connection: keep-alive, Content-Length: 9, Origin: chrome-extension://cdjfedloinmbppobahmonnjigpmlajcd, User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36, Content-Type: text/plain;charset=UTF-8, Accept: */*, Accept-Encoding: gzip,deflate,sdch, Accept-Language: en-US,en;q=0.8]
+01/11/2013 11:17:06 [ INFO] HttpDotGraphMessageHandler - Incoming entity content (bytes): 9
+01/11/2013 11:17:06 [DEBUG] HttpDotGraphMessageHandler - message contents
+asfdasdfa
+01/11/2013 11:17:06 [ INFO] HttpDotGraphMessageHandler - Responded with Success
+01/11/2013 11:17:11 [ INFO] DotGraphics$RequestListenerThread - Incoming connection from /0:0:0:0:0:0:0:1%0
+01/11/2013 11:17:11 [ INFO] DotGraphics$WorkerThread - New connection thread
+01/11/2013 11:17:15 [ INFO] DotGraphics$RequestListenerThread - Incoming connection from /0:0:0:0:0:0:0:1%0
+01/11/2013 11:17:15 [ INFO] DotGraphics$WorkerThread - New connection thread
+01/11/2013 11:17:17 [ INFO] DotGraphics$RequestListenerThread - Incoming connection from /0:0:0:0:0:0:0:1%0
+01/11/2013 11:17:17 [ INFO] DotGraphics$WorkerThread - New connection thread
+01/11/2013 11:17:17 [ INFO] HttpDotGraphMessageHandler - POST / [Host: localhost:8000, Connection: keep-alive, Content-Length: 9, Origin: chrome-extension://cdjfedloinmbppobahmonnjigpmlajcd, User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36, Content-Type: text/plain;charset=UTF-8, Accept: */*, Accept-Encoding: gzip,deflate,sdch, Accept-Language: en-US,en;q=0.8]
+01/11/2013 11:17:17 [ INFO] HttpDotGraphMessageHandler - Incoming entity content (bytes): 9
+01/11/2013 11:17:17 [DEBUG] HttpDotGraphMessageHandler - message contents
+asfdasdfa
+01/11/2013 11:17:17 [ INFO] HttpDotGraphMessageHandler - Responded with Success
+01/11/2013 11:17:18 [ INFO] DotGraphics$RequestListenerThread - Incoming connection from /0:0:0:0:0:0:0:1%0
+01/11/2013 11:17:18 [ INFO] DotGraphics$WorkerThread - New connection thread
+01/11/2013 11:17:18 [ INFO] HttpDotGraphMessageHandler - GET / [Host: localhost:8000, Connection: keep-alive, User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36, Accept: */*, Accept-Encoding: gzip,deflate,sdch, Accept-Language: en-US,en;q=0.8]
+01/11/2013 11:17:18 [ INFO] HttpDotGraphMessageHandler - Responded with Success
+01/11/2013 11:17:41 [ INFO] DotGraphics$RequestListenerThread - Incoming connection from /0:0:0:0:0:0:0:1%0
+01/11/2013 11:17:41 [ INFO] DotGraphics$WorkerThread - New connection thread
+01/11/2013 11:17:41 [ INFO] HttpDotGraphMessageHandler - POST / [Host: localhost:8000, Connection: keep-alive, Content-Length: 933, Origin: chrome-extension://cdjfedloinmbppobahmonnjigpmlajcd, User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36, Content-Type: text/plain;charset=UTF-8, Accept: */*, Accept-Encoding: gzip,deflate,sdch, Accept-Language: en-US,en;q=0.8]
+01/11/2013 11:17:41 [ INFO] HttpDotGraphMessageHandler - Incoming entity content (bytes): 933
+01/11/2013 11:17:41 [DEBUG] HttpDotGraphMessageHandler - message contents
+digraph G {
+rankdir=LR
+"START" [style="filled", fillcolor="gray", shape="circle"];
+"START" -> "Split Execution";
+"Split Execution" [shape="oval"];
+"Split Execution" -> "Create Document in Drive";
+"Split Execution" -> "CAB Site Accountant";
+"Create Document in Drive" [shape="rectangle"];
+"Create Document in Drive" -> "Merge Execution";
+"CAB Site Accountant" [shape="tab"];
+"CAB Site Accountant" -> "Merge Execution";
+"Merge Execution" [shape="oval"];
+"Merge Execution" -> "Site Accountant approved?";
+"Site Accountant approved?" [shape="diamond"];
+"Site Accountant approved?" -> "Send Publish Email" [label="true"];
+"Site Accountant approved?" -> "Originator - CAPEX Rejection" [label="false"];
+"Originator - CAPEX Rejection" [shape="tab"];
+"Originator - CAPEX Rejection" -> "Split Execution";
+"Send Publish Email" [shape="rectangle"];
+"Send Publish Email" -> "END";
+"END" [style="filled", fillcolor="gray", shape="doublecircle"];
+}
+01/11/2013 11:17:41 [ INFO] HttpDotGraphMessageHandler - digraph G {
+rankdir=LR
+"START" [style="filled", fillcolor="gray", shape="circle"];
+"START" -> "Split Execution";
+"Split Execution" [shape="oval"];
+"Split Execution" -> "Create Document in Drive";
+"Split Execution" -> "CAB Site Accountant";
+"Create Document in Drive" [shape="rectangle"];
+"Create Document in Drive" -> "Merge Execution";
+"CAB Site Accountant" [shape="tab"];
+"CAB Site Accountant" -> "Merge Execution";
+"Merge Execution" [shape="oval"];
+"Merge Execution" -> "Site Accountant approved?";
+"Site Accountant approved?" [shape="diamond"];
+"Site Accountant approved?" -> "Send Publish Email" [label="true"];
+"Site Accountant approved?" -> "Originator - CAPEX Rejection" [label="false"];
+"Originator - CAPEX Rejection" [shape="tab"];
+"Originator - CAPEX Rejection" -> "Split Execution";
+"Send Publish Email" [shape="rectangle"];
+"Send Publish Email" -> "END";
+"END" [style="filled", fillcolor="gray", shape="doublecircle"];
+}
+01/11/2013 11:17:41 [ INFO] HttpDotGraphMessageHandler - Responded with Success
+01/11/2013 11:17:52 [ INFO] DotGraphics$RequestListenerThread - Incoming connection from /0:0:0:0:0:0:0:1%0
+01/11/2013 11:17:52 [ INFO] DotGraphics$WorkerThread - New connection thread
+01/11/2013 11:17:52 [ INFO] HttpDotGraphMessageHandler - POST /svg [Host: localhost:8000, Connection: keep-alive, Content-Length: 933, Origin: chrome-extension://cdjfedloinmbppobahmonnjigpmlajcd, User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36, Content-Type: text/plain;charset=UTF-8, Accept: */*, Accept-Encoding: gzip,deflate,sdch, Accept-Language: en-US,en;q=0.8]
+01/11/2013 11:17:52 [ INFO] HttpDotGraphMessageHandler - Incoming entity content (bytes): 933
+01/11/2013 11:17:52 [DEBUG] HttpDotGraphMessageHandler - message contents
+digraph G {
+rankdir=LR
+"START" [style="filled", fillcolor="gray", shape="circle"];
+"START" -> "Split Execution";
+"Split Execution" [shape="oval"];
+"Split Execution" -> "Create Document in Drive";
+"Split Execution" -> "CAB Site Accountant";
+"Create Document in Drive" [shape="rectangle"];
+"Create Document in Drive" -> "Merge Execution";
+"CAB Site Accountant" [shape="tab"];
+"CAB Site Accountant" -> "Merge Execution";
+"Merge Execution" [shape="oval"];
+"Merge Execution" -> "Site Accountant approved?";
+"Site Accountant approved?" [shape="diamond"];
+"Site Accountant approved?" -> "Send Publish Email" [label="true"];
+"Site Accountant approved?" -> "Originator - CAPEX Rejection" [label="false"];
+"Originator - CAPEX Rejection" [shape="tab"];
+"Originator - CAPEX Rejection" -> "Split Execution";
+"Send Publish Email" [shape="rectangle"];
+"Send Publish Email" -> "END";
+"END" [style="filled", fillcolor="gray", shape="doublecircle"];
+}
+01/11/2013 11:17:52 [ INFO] HttpDotGraphMessageHandler - digraph G {
+rankdir=LR
+"START" [style="filled", fillcolor="gray", shape="circle"];
+"START" -> "Split Execution";
+"Split Execution" [shape="oval"];
+"Split Execution" -> "Create Document in Drive";
+"Split Execution" -> "CAB Site Accountant";
+"Create Document in Drive" [shape="rectangle"];
+"Create Document in Drive" -> "Merge Execution";
+"CAB Site Accountant" [shape="tab"];
+"CAB Site Accountant" -> "Merge Execution";
+"Merge Execution" [shape="oval"];
+"Merge Execution" -> "Site Accountant approved?";
+"Site Accountant approved?" [shape="diamond"];
+"Site Accountant approved?" -> "Send Publish Email" [label="true"];
+"Site Accountant approved?" -> "Originator - CAPEX Rejection" [label="false"];
+"Originator - CAPEX Rejection" [shape="tab"];
+"Originator - CAPEX Rejection" -> "Split Execution";
+"Send Publish Email" [shape="rectangle"];
+"Send Publish Email" -> "END";
+"END" [style="filled", fillcolor="gray", shape="doublecircle"];
+}
+01/11/2013 11:17:52 [ INFO] HttpDotGraphMessageHandler - Responded with Success
+01/11/2013 11:20:01 [ INFO] DotGraphics$RequestListenerThread - Listening on port 8000
+01/11/2013 11:20:10 [ INFO] DotGraphics$RequestListenerThread - Incoming connection from /0:0:0:0:0:0:0:1%0
+01/11/2013 11:20:10 [ INFO] DotGraphics$WorkerThread - New connection thread
+01/11/2013 11:20:10 [ INFO] HttpDotGraphMessageHandler - POST /svg [Host: localhost:8000, Connection: keep-alive, Content-Length: 933, Origin: chrome-extension://cdjfedloinmbppobahmonnjigpmlajcd, User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36, Content-Type: text/plain;charset=UTF-8, Accept: */*, Accept-Encoding: gzip,deflate,sdch, Accept-Language: en-US,en;q=0.8]
+01/11/2013 11:20:10 [ INFO] HttpDotGraphMessageHandler - Incoming entity content (bytes): 933
+01/11/2013 11:20:10 [DEBUG] HttpDotGraphMessageHandler - message contents
+digraph G {
+rankdir=LR
+"START" [style="filled", fillcolor="gray", shape="circle"];
+"START" -> "Split Execution";
+"Split Execution" [shape="oval"];
+"Split Execution" -> "Create Document in Drive";
+"Split Execution" -> "CAB Site Accountant";
+"Create Document in Drive" [shape="rectangle"];
+"Create Document in Drive" -> "Merge Execution";
+"CAB Site Accountant" [shape="tab"];
+"CAB Site Accountant" -> "Merge Execution";
+"Merge Execution" [shape="oval"];
+"Merge Execution" -> "Site Accountant approved?";
+"Site Accountant approved?" [shape="diamond"];
+"Site Accountant approved?" -> "Send Publish Email" [label="true"];
+"Site Accountant approved?" -> "Originator - CAPEX Rejection" [label="false"];
+"Originator - CAPEX Rejection" [shape="tab"];
+"Originator - CAPEX Rejection" -> "Split Execution";
+"Send Publish Email" [shape="rectangle"];
+"Send Publish Email" -> "END";
+"END" [style="filled", fillcolor="gray", shape="doublecircle"];
+}
+01/11/2013 11:20:10 [ INFO] HttpDotGraphMessageHandler - requesting graph type: svg
+01/11/2013 11:20:10 [ INFO] HttpDotGraphMessageHandler - digraph G {
+rankdir=LR
+"START" [style="filled", fillcolor="gray", shape="circle"];
+"START" -> "Split Execution";
+"Split Execution" [shape="oval"];
+"Split Execution" -> "Create Document in Drive";
+"Split Execution" -> "CAB Site Accountant";
+"Create Document in Drive" [shape="rectangle"];
+"Create Document in Drive" -> "Merge Execution";
+"CAB Site Accountant" [shape="tab"];
+"CAB Site Accountant" -> "Merge Execution";
+"Merge Execution" [shape="oval"];
+"Merge Execution" -> "Site Accountant approved?";
+"Site Accountant approved?" [shape="diamond"];
+"Site Accountant approved?" -> "Send Publish Email" [label="true"];
+"Site Accountant approved?" -> "Originator - CAPEX Rejection" [label="false"];
+"Originator - CAPEX Rejection" [shape="tab"];
+"Originator - CAPEX Rejection" -> "Split Execution";
+"Send Publish Email" [shape="rectangle"];
+"Send Publish Email" -> "END";
+"END" [style="filled", fillcolor="gray", shape="doublecircle"];
+}
+01/11/2013 11:20:10 [ INFO] HttpDotGraphMessageHandler - Responded with Success
+01/11/2013 11:20:32 [ INFO] DotGraphics$RequestListenerThread - Incoming connection from /0:0:0:0:0:0:0:1%0
+01/11/2013 11:20:32 [ INFO] DotGraphics$WorkerThread - New connection thread
+01/11/2013 11:20:32 [ INFO] HttpDotGraphMessageHandler - POST /pdf [Host: localhost:8000, Connection: keep-alive, Content-Length: 933, Origin: chrome-extension://cdjfedloinmbppobahmonnjigpmlajcd, User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36, Content-Type: text/plain;charset=UTF-8, Accept: */*, Accept-Encoding: gzip,deflate,sdch, Accept-Language: en-US,en;q=0.8]
+01/11/2013 11:20:32 [ INFO] HttpDotGraphMessageHandler - Incoming entity content (bytes): 933
+01/11/2013 11:20:32 [DEBUG] HttpDotGraphMessageHandler - message contents
+digraph G {
+rankdir=LR
+"START" [style="filled", fillcolor="gray", shape="circle"];
+"START" -> "Split Execution";
+"Split Execution" [shape="oval"];
+"Split Execution" -> "Create Document in Drive";
+"Split Execution" -> "CAB Site Accountant";
+"Create Document in Drive" [shape="rectangle"];
+"Create Document in Drive" -> "Merge Execution";
+"CAB Site Accountant" [shape="tab"];
+"CAB Site Accountant" -> "Merge Execution";
+"Merge Execution" [shape="oval"];
+"Merge Execution" -> "Site Accountant approved?";
+"Site Accountant approved?" [shape="diamond"];
+"Site Accountant approved?" -> "Send Publish Email" [label="true"];
+"Site Accountant approved?" -> "Originator - CAPEX Rejection" [label="false"];
+"Originator - CAPEX Rejection" [shape="tab"];
+"Originator - CAPEX Rejection" -> "Split Execution";
+"Send Publish Email" [shape="rectangle"];
+"Send Publish Email" -> "END";
+"END" [style="filled", fillcolor="gray", shape="doublecircle"];
+}
+01/11/2013 11:20:32 [ INFO] HttpDotGraphMessageHandler - requesting graph type: pdf
+01/11/2013 11:20:32 [ INFO] HttpDotGraphMessageHandler - digraph G {
+rankdir=LR
+"START" [style="filled", fillcolor="gray", shape="circle"];
+"START" -> "Split Execution";
+"Split Execution" [shape="oval"];
+"Split Execution" -> "Create Document in Drive";
+"Split Execution" -> "CAB Site Accountant";
+"Create Document in Drive" [shape="rectangle"];
+"Create Document in Drive" -> "Merge Execution";
+"CAB Site Accountant" [shape="tab"];
+"CAB Site Accountant" -> "Merge Execution";
+"Merge Execution" [shape="oval"];
+"Merge Execution" -> "Site Accountant approved?";
+"Site Accountant approved?" [shape="diamond"];
+"Site Accountant approved?" -> "Send Publish Email" [label="true"];
+"Site Accountant approved?" -> "Originator - CAPEX Rejection" [label="false"];
+"Originator - CAPEX Rejection" [shape="tab"];
+"Originator - CAPEX Rejection" -> "Split Execution";
+"Send Publish Email" [shape="rectangle"];
+"Send Publish Email" -> "END";
+"END" [style="filled", fillcolor="gray", shape="doublecircle"];
+}
+01/11/2013 11:20:32 [ INFO] HttpDotGraphMessageHandler - Responded with Success
+01/11/2013 11:20:55 [ INFO] DotGraphics$RequestListenerThread - Incoming connection from /0:0:0:0:0:0:0:1%0
+01/11/2013 11:20:55 [ INFO] DotGraphics$WorkerThread - New connection thread
+01/11/2013 11:20:55 [ INFO] HttpDotGraphMessageHandler - POST / [Host: localhost:8000, Connection: keep-alive, Content-Length: 933, Origin: chrome-extension://cdjfedloinmbppobahmonnjigpmlajcd, User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36, Content-Type: text/plain;charset=UTF-8, Accept: */*, Accept-Encoding: gzip,deflate,sdch, Accept-Language: en-US,en;q=0.8]
+01/11/2013 11:20:55 [ INFO] HttpDotGraphMessageHandler - Incoming entity content (bytes): 933
+01/11/2013 11:20:55 [DEBUG] HttpDotGraphMessageHandler - message contents
+digraph G {
+rankdir=LR
+"START" [style="filled", fillcolor="gray", shape="circle"];
+"START" -> "Split Execution";
+"Split Execution" [shape="oval"];
+"Split Execution" -> "Create Document in Drive";
+"Split Execution" -> "CAB Site Accountant";
+"Create Document in Drive" [shape="rectangle"];
+"Create Document in Drive" -> "Merge Execution";
+"CAB Site Accountant" [shape="tab"];
+"CAB Site Accountant" -> "Merge Execution";
+"Merge Execution" [shape="oval"];
+"Merge Execution" -> "Site Accountant approved?";
+"Site Accountant approved?" [shape="diamond"];
+"Site Accountant approved?" -> "Send Publish Email" [label="true"];
+"Site Accountant approved?" -> "Originator - CAPEX Rejection" [label="false"];
+"Originator - CAPEX Rejection" [shape="tab"];
+"Originator - CAPEX Rejection" -> "Split Execution";
+"Send Publish Email" [shape="rectangle"];
+"Send Publish Email" -> "END";
+"END" [style="filled", fillcolor="gray", shape="doublecircle"];
+}
+01/11/2013 11:20:55 [ INFO] HttpDotGraphMessageHandler - requesting graph type: 
+01/11/2013 11:20:55 [ INFO] HttpDotGraphMessageHandler - digraph G {
+rankdir=LR
+"START" [style="filled", fillcolor="gray", shape="circle"];
+"START" -> "Split Execution";
+"Split Execution" [shape="oval"];
+"Split Execution" -> "Create Document in Drive";
+"Split Execution" -> "CAB Site Accountant";
+"Create Document in Drive" [shape="rectangle"];
+"Create Document in Drive" -> "Merge Execution";
+"CAB Site Accountant" [shape="tab"];
+"CAB Site Accountant" -> "Merge Execution";
+"Merge Execution" [shape="oval"];
+"Merge Execution" -> "Site Accountant approved?";
+"Site Accountant approved?" [shape="diamond"];
+"Site Accountant approved?" -> "Send Publish Email" [label="true"];
+"Site Accountant approved?" -> "Originator - CAPEX Rejection" [label="false"];
+"Originator - CAPEX Rejection" [shape="tab"];
+"Originator - CAPEX Rejection" -> "Split Execution";
+"Send Publish Email" [shape="rectangle"];
+"Send Publish Email" -> "END";
+"END" [style="filled", fillcolor="gray", shape="doublecircle"];
+}
+01/11/2013 11:20:55 [ INFO] HttpDotGraphMessageHandler - Responded with Success
