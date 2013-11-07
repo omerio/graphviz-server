@@ -15,3 +15,5 @@ To use the Graphviz server simply submit a HTTP POST with the dot graph script s
 * Post to http://localhost:8080/pdf to render the graph as PDF
 * Post to http://localhost:8080 to render the graph as PNG (default)
 
+For more details see this blog post [http://dawelbeit.info/?p=81](http://dawelbeit.info/?p=81).
+And the demo running on Google AppEngine [http://dot-graphics1.appspot.com/](http://dot-graphics1.appspot.com/) 
