@@ -21,7 +21,7 @@ Graphviz is a powerful open source graph visualization and layout tool, unfortun
 
 In the cases mentioned above, it does make sense to setup one graphviz-server in a separate environment, and then access it from all your applications that require graphs to be generated.
 
-## Live Demos
+## Live Demo
 
 Here is a demo running on Google App Engine [http://dot-graphics1.appspot.com/](http://dot-graphics1.appspot.com/). 
 
@@ -30,16 +30,23 @@ The source code for the demo is [here](https://github.com/omerio/graphviz-appeng
 
 ## Jump start
 
-1. Clone the git repository - `git clone https://github.com/omerio/graphviz-server`
-2. An executable jar with dependencies is included in the dist folder. The port on which the server listens can be configured as a command line parameter to the jar. To change the default port (8080) edit the DotGraphics.sh in the dist directory:
+* Clone the git repository - `git clone https://github.com/omerio/graphviz-server`
+* An executable jar with dependencies is included in the dist folder. The port on which the server listens can be configured as a command line parameter to the jar. To change the default port (8080) edit the DotGraphics.sh in the dist directory:
 ```
 #!/bin/sh
 java -jar DotGraphics.jar 8080 > /dev/null 2>&1 &
 exit 0
 ```
-3. If you want to make changes to the code and build your own jar, you need to have Maven installed. Simply run `mvn package` this will create a jar with dependencies inside the **target** directory.
+* If you want to make changes to the code and build your own jar, you need to have Maven installed. Simply run `mvn package` this will create a jar with dependencies inside the **target** directory.
 
 ## Usage
+
+Run the graphviz-server:
+```
+./DotGraphics.sh
+```
+
+The graphviz-server uses Log4j for logging. All incoming requests are logged to DotGraphics.log, a sample output is provided [here](https://github.com/omerio/graphviz-server/blob/master/dist/DotGraphics.log).
 
 To use the Graphviz server simply submit a HTTP POST with the dot graph script set as the request body. Optionally an output type can be specified on the URL for example:
 
@@ -58,5 +65,10 @@ If you are using Docker and would like to run graphviz-server in a Docker contai
 
 For more details on the implementation of graphviz-server and a detailed guide on how to set it up on Google Compute Engine VM, see this blog post:
 
+
 [http://omerio.com/2013/11/03/running-a-graphviz-server-on-google-compute-engine/](http://omerio.com/2013/11/03/running-a-graphviz-server-on-google-compute-engine/).
+
+## License
+
+Open Source (Apache License 2.0)
 
