@@ -58,7 +58,7 @@ To use the Graphviz server simply submit a HTTP POST with the dot graph script s
 
 ## Docker
 
-If you are using Docker and would like to run graphviz-server in a Docker container, I've created a Ubuntu [Docker image](https://hub.docker.com/r/omerio/graphviz-server/). There is a Dockerfile in the source if you want to build your own image.
+If you are using Docker and would like to run graphviz-server in a Docker container, I've created a Ubuntu [Docker image](https://hub.docker.com/r/omerio/graphviz-server/). There is a [Dockerfile](https://github.com/omerio/graphviz-server/blob/master/Dockerfile) in the source if you want to build your own image.
 
 
 ## Documentation
