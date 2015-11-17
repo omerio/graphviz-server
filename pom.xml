@@ -87,6 +87,9 @@
 					<descriptorRefs>
 						<descriptorRef>jar-with-dependencies</descriptorRef>
 					</descriptorRefs>
+					<finalName>DotGraphics</finalName>
+        			<appendAssemblyId>false</appendAssemblyId>
+        			<outputDirectory>dist</outputDirectory>
 				</configuration>
 				<executions>
 					<execution>
