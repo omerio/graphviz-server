@@ -43,13 +43,7 @@ public class DotGraphics {
 	 * @throws Exception
 	 */
 	public static void main(String[] args) throws Exception {
-		if (args.length != 1) {
-			System.err.println("Usage java -jar DotGraphics.jar <port>");
-			System.exit(1);
-		}
-		// Document root directory
-		//String docRoot = args[0];
-		int port = Integer.parseInt(args[0]);
+		int port = Integer.parseInt(System.getenv("PORT"));
 
 		// Set up the HTTP protocol processor
 		HttpProcessor httpproc = HttpProcessorBuilder.create()
