@@ -27,22 +27,23 @@ import org.apache.log4j.Logger;
  *
  */
 public class HttpDotGraphMessageHandler implements HttpRequestHandler  {
-	
+
 	private static final String TEMP_PATH = "/tmp/graph.";
-	
+
 	// 3 supported types
 	private static final String GRAPH_TYPE_PNG = "png";
 	private static final String GRAPH_TYPE_PDF = "pdf";
 	private static final String GRAPH_TYPE_SVG = "svg";
-	
+
 	private static final String CONTENT_TYPE_PNG = "image/png";
 	private static final String CONTENT_TYPE_PDF = "application/pdf";
-	
+	private static final String CONTENT_TYPE_SVG = "application/svg+xml";
+
 	private static final Logger log = Logger.getLogger(HttpDotGraphMessageHandler.class.getName());
 
 
 	/**
-	 * 
+	 *
 	 * @param url
 	 * @param proxyUser
 	 * @param proxyPass
@@ -60,17 +61,17 @@ public class HttpDotGraphMessageHandler implements HttpRequestHandler  {
 			final HttpContext context) throws HttpException, IOException {
 
 		String method = request.getRequestLine().getMethod().toUpperCase(Locale.ENGLISH);
-		
+
 		if (!method.equals("GET") && !method.equals("HEAD") && !method.equals("POST")) {
 			throw new MethodNotSupportedException(method + " method not supported");
 		}
-		
+
 		log.info(request.toString());
-		
+
 		String target = request.getRequestLine().getUri();
 
 		response.setStatusCode(HttpStatus.SC_OK);
-		
+
 		if (request instanceof HttpEntityEnclosingRequest) {
 			HttpEntity entity = ((HttpEntityEnclosingRequest) request).getEntity();
 			byte[] entityContent = EntityUtils.toByteArray(entity);
@@ -81,7 +82,7 @@ public class HttpDotGraphMessageHandler implements HttpRequestHandler  {
 			// only respond if we have a valid dot
 			if(StringUtils.isNotBlank(dot) && GraphViz.isValidDotText(dot)) {
 
-				target = (StringUtils.isNotBlank(target) ? 
+				target = (StringUtils.isNotBlank(target) ?
 						StringUtils.remove((URLDecoder.decode(target, "UTF-8")).trim().toLowerCase(), '/') : null);
 
 				log.info("requesting graph type: " + target);
@@ -94,32 +95,33 @@ public class HttpDotGraphMessageHandler implements HttpRequestHandler  {
 		}
 
 		log.info("Responded with Success");
-		
+
 	}
-	
+
 	/**
-	 * 
+	 *
 	 * @param dot
 	 * @return
 	 */
 	private HttpEntity generateGraph(String dot, String target) {
-	
+
 		GraphViz gv = new GraphViz();
 		gv.readString(dot);
 		log.info(gv.getDotSource());
-		
+
 		ContentType contentType;
 		String graphType;
-		
+
 		if(GRAPH_TYPE_SVG.equals(target)) {
-			
+
 			graphType = GRAPH_TYPE_SVG;
-			contentType = ContentType.APPLICATION_SVG_XML;
-			
+			// contentType = ContentType.APPLICATION_SVG_XML;
+			contentType = ContentType.create(CONTENT_TYPE_SVG, (Charset) null);
+
 		} else if(GRAPH_TYPE_PDF.equals(target)) {
 			graphType = GRAPH_TYPE_PDF;
 			contentType = ContentType.create(CONTENT_TYPE_PDF, (Charset) null);
-			
+
 		} else {
 			// default png
 			graphType = GRAPH_TYPE_PNG;
@@ -136,11 +138,12 @@ public class HttpDotGraphMessageHandler implements HttpRequestHandler  {
 		File out = new File(TEMP_PATH + graphType);   // Linux
 
 		gv.writeGraphToFile( gv.getGraph( gv.getDotSource(), graphType ), out );
-		
+
 		FileEntity body = new FileEntity(out, contentType);
-		
+		//FileEntity body = new FileEntity(out, "application/svg+xml; charset=utf-8");
+
 		return body;
-       
+
 	}
 
 }

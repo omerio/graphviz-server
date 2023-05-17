@@ -31,9 +31,14 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.InputStreamReader;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * <dl>
@@ -63,7 +68,7 @@ import org.apache.log4j.Logger;
  *
  * @version v0.4, 2011/02/05 (February) -- Patch of Keheliya Gallaba is added. Now you
  * can specify the type of the output file: gif, dot, fig, pdf, ps, svg, png, etc.
- * @version v0.3, 2010/11/29 (November) -- Windows support + ability 
+ * @version v0.3, 2010/11/29 (November) -- Windows support + ability
  * to read the graph from a text file
  * @version v0.2, 2010/07/22 (July) -- bug fix
  * @version v0.1, 2003/12/04 (December) -- first release
@@ -71,7 +76,7 @@ import org.apache.log4j.Logger;
  */
 public class GraphViz
 {
-	
+
 	private static final Logger log = Logger.getLogger(GraphViz.class.getName());
 	/**
 	 * The dir. where temporary files will be created.
@@ -84,10 +89,10 @@ public class GraphViz
 	 */
 	//private static String DOT = "/usr/local/bin/dot"; // MAC
 	private static String DOT = "/usr/bin/dot";	// Linux
-	//   private static String DOT = "c:/Program Files/Graphviz2.26.3/bin/dot.exe";	// Windows
-	
+	//private static String DOT = "C:/Program Files/Graphviz/bin/dot.exe";	// Windows
+
 	public static final String GRAPH_START = "digraph G {";
-	
+
 	public static final String GRAPH_END = "}";
 
 	/**
@@ -147,7 +152,7 @@ public class GraphViz
 			if (dot != null)
 			{
 				img_stream = get_img_stream(dot, type);
-				if (dot.delete() == false) 
+				if (dot.delete() == false)
 					log.warn("Warning: " + dot.getAbsolutePath() + " could not be deleted!");
 				return img_stream;
 			}
@@ -211,7 +216,7 @@ public class GraphViz
 			// Close it if we need to
 			if( in != null ) in.close();
 
-			if (img.delete() == false) 
+			if (img.delete() == false)
 				log.warn("Warning: " + img.getAbsolutePath() + " could not be deleted!");
 		}
 		catch (java.io.IOException ioe) {
@@ -266,7 +271,7 @@ public class GraphViz
 
 	/**
 	 * Read a DOT graph from a text file.
-	 * 
+	 *
 	 * @param input Input text file containing the DOT graph
 	 * source.
 	 */
@@ -284,7 +289,7 @@ public class GraphViz
 				sb.append(line);
 			}
 			dis.close();
-		} 
+		}
 		catch (Exception e) {
 			log.error("Error: ", e);
 		}
@@ -299,14 +304,32 @@ public class GraphViz
 	public void readString(String dot) {
 		this.graph = new StringBuilder(dot);
 	}
-	
+
 	/**
 	 * is a valid dot source
 	 * @param dot
 	 * @return
 	 */
 	public static boolean isValidDotText(String dot) {
-		return StringUtils.isNotBlank(dot) && (dot.indexOf(GRAPH_START) > -1);
+		// return StringUtils.isNotBlank(dot) && (dot.indexOf(GRAPH_START) > -1);
+		return StringUtils.isNotBlank(dot) && (checkGraphStart(dot));
+	}
+
+	private static boolean checkGraphStart(String dot) {
+		boolean ret_val;
+
+		// "digraph" 다음에 오는 단어를 찾는 정규 표현식 패턴
+        String patternString = "digraph\\s+(\\w+)\\s*\\{";
+
+        Pattern pattern = Pattern.compile(patternString);
+        Matcher matcher = pattern.matcher(dot);
+
+        if (matcher.find()) {
+            ret_val = true;
+        } else {
+            ret_val = false;
+        }
+		return ret_val;
 	}
 
 } // end of class GraphViz
